@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    tier: frontend
+spec:
+  containers:
+  - image: javedsaqib/sit323-737-2023-t1-prac5p_app:6be5c20a3157
+    name: nodewebapp
+    ports:
+    - containerPort: 8080
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
